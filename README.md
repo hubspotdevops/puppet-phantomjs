@@ -3,6 +3,8 @@ Install PhantomJS.  optionally run it as a system service.
 
 ## Requires
 * A PhantomJS RPM package in an available repo.
+* [pydaemon-runner](https://github.com/HubSpot/pydaemon-runner) for the
+  init.d script.
 
 ## Usage
 First ensure that a PhantomJS RPM exists and is available to the host.
@@ -19,8 +21,8 @@ node foobar {
 ```
 
 ## TODO
-* The init.d script relies on an unreleased script for running PhantomJS as
- a service.
+* Convert over from daemon-runner to a general purpose daemon start for
+  non-HubSpot use.
 
 ## Authors
 * Tom McLaughlin <tmclaughlin@hubspot.com>
