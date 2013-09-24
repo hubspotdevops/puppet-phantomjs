@@ -18,6 +18,10 @@ node foobar {
 }
 ```
 
+## TODO
+* The init.d script relies on an unreleased script for running PhantomJS as
+ a service.
+
 ## Authors
 * Tom McLaughlin <tmclaughlin@hubspot.com>
 
