@@ -28,4 +28,5 @@ class phantomjs::params {
   $out_file       = '/var/log/phantom.out'
   $error_file     = '/var/log/phantom.err'
   $service_args   = ''
+  $webdriver_addr = '127.0.0.1:8910'
 }

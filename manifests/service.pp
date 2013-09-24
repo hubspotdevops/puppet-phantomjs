@@ -44,6 +44,7 @@ class phantomjs::service(
   $out_file,
   $error_file,
   $service_args,
+  $webdriver_addr,
 ) {
   file { '/etc/init.d/phantomjs':
     ensure  => present,

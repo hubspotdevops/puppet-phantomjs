@@ -46,6 +46,7 @@ class phantomjs(
   $out_file       = $phantomjs::params::out_file,
   $error_file     = $phantomjs::params::error_file,
   $service_args   = $phantomjs::params::service_args,
+  $webdriver_addr = $phantomjs::params::webdriver_addr,
 ) inherits phantomjs::params {
 
   class { '::phantomjs::package':
@@ -54,11 +55,12 @@ class phantomjs(
 
   if $manage_service {
     class { '::phantomjs::service':
-      svc_ensure   => $svc_ensure,
-      svc_enable   => $svc_enable,
-      out_file     => $out_file,
-      error_file   => $error_file,
-      service_args => $service_args
+      svc_ensure     => $svc_ensure,
+      svc_enable     => $svc_enable,
+      out_file       => $out_file,
+      error_file     => $error_file,
+      service_args   => $service_args,
+      webdriver_addr => $webdriver_addr
     }
 
     Class['::phantomjs::package'] -> Class['::phantomjs::service']

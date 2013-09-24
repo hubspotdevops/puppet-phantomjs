@@ -24,7 +24,7 @@ function start() {
     daemon-runner -d -e "<%= @error_file %>" \
                      -o "<%= @out_file %>" \
                      -p "$PID_FILE"    \
-                     -c /usr/bin/phantomjs <%= @service_args%>
+                     -c /usr/bin/phantomjs --webdriver=<%= $webdriver_addr %> <%= @service_args%>
 
     RETVAL=$?
 
