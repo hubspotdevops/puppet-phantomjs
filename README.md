@@ -12,7 +12,7 @@ First ensure that a PhantomJS RPM exists and is available to the host.
 NOTE: PhantomJS does not make a Yum repo available but does provide
 instructions for creating an rpm:
 
-[http://phantomjs.org/build.html]
+http://phantomjs.org/build.html
 
 ```puppet
 node foobar {
